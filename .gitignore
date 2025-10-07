@@ -40,9 +40,6 @@ dist/
 # macOS
 .DS_Store
 
-# npm package manager
-package-lock.json
-
 # yarn package manager
 yarn.lock
 
