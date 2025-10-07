@@ -8,12 +8,20 @@ import { AboutPage } from './pages/about'
 import { NavBar } from './components/nav-bar'
 import { HomePage } from './pages/home'
 import { Wrapper } from './context'
+import type { UserResource, GetToken, LoadedClerk } from '@clerk/types'
+
+export type RouterContext = {
+  user: UserResource | null
+  isSignedIn: boolean
+  getToken: GetToken
+  clerk: LoadedClerk | null
+}
 
 const rootRoute = createRootRoute({
   component: () => (
     <Wrapper>
       <NavBar />
-      <main className="pt-10 px-4 max-w-7xl mx-auto">
+      <main className="max-w-7xl mx-auto">
         <Outlet />
       </main>
     </Wrapper>
