@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "npx tsc -b && vite build",
     "format": "prettier --write .",
-    "lint": "eslint .",
+    "lint": "eslint . && npx tsc --noEmit",
     "preview": "vite preview",
     "start": "serve -s dist"
   },
